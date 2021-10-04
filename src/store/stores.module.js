@@ -1,6 +1,5 @@
 import API from "@/services/api"
-
-
+import hashMapStores from '@/helperFunctions/hashMapStores'
 
 export default {
     namespaced: true,
@@ -20,11 +19,8 @@ export default {
     },
     getters: {
         getStoreListMap(state) {
-            const storeListMap = {};
-            for (let i = 0; i < state.storesList.length; i++) {
-                storeListMap[state.storesList[i].storeID] = state.storesList[i];
-            }
-            return storeListMap;
+            console.log(hashMapStores)
+            return hashMapStores(state.storesList);
         }
     }
 

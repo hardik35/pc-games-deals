@@ -13,7 +13,7 @@
           <span style="color: green"> {{ deal.salePrice}}</span>
           <br>
           <br>
-          <el-button>View More</el-button>
+          <el-button @click="routeToDealDetails(deal.gameID, deal.dealID)">View More</el-button>
         </div>
       </el-col>
     </el-row>
@@ -41,6 +41,15 @@ export default {
     ...mapActions('deals', [
       'getAllDeals'
     ]),
+    routeToDealDetails(dealId, gameId) {
+      this.$router.push({
+        name: 'dealDetails',
+        params: {
+          dealId,
+          gameId,
+        }
+      })
+    }
   }
 }
 </script>

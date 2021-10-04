@@ -10,7 +10,6 @@ export default {
     actions: {
         async getAllDeals(mutations) {
             const dealsData = await API.deals.FETCH_DEALS_LIST();
-            console.log(dealsData);
             mutations.commit('setDeals', dealsData.data);
         }
     },

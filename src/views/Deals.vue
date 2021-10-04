@@ -41,7 +41,7 @@ export default {
     ...mapActions('deals', [
       'getAllDeals'
     ]),
-    routeToDealDetails(dealId, gameId) {
+    routeToDealDetails(gameId, dealId) {
       this.$router.push({
         name: 'dealDetails',
         params: {

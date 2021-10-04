@@ -10,7 +10,6 @@ export default {
     actions: {
         async getAllStores(mutations, slug) {
             const storesData = await API.stores.FETCH_STORES_LIST();
-            // console.log(storesData);
             mutations.commit('setStores', storesData.data);
         }
     },

@@ -18,14 +18,12 @@
 export default {
     data() {
         return {
-            activeIndex: "1",
+            activeIndex: this.$route.name === 'dealDetails' ? "0" : "1",
         }
     },
     methods: {
         handleSelect(key, keyPath) {
             this.$router.push('/deals');
-            // console.log(key, keyPath);
-            // this.activeIndex = 
         }
     }
 }
